@@ -6,9 +6,16 @@ void example1() {
     int w = 2, x = 4, y = 6, z = 8;
 
     //T OR F: boolean expressons and order of operations
-    cout << (y / x < w && z / y < w / x) << endl;
-    cout << (y / x < w || z / y < w / x) << endl;
-    cout << (x + y + z / w == 9) << endl;
+    cout << "A: " << (y / x < w && z / y < w / x) << endl;
+    cout << "B: " << (y / x < w || z / y < w / x) << endl;
+
+    cout << "C: " << (x < z / w || w > z) << endl;
+
+    //&& is done first, then ||
+    cout << "D: " << (x < z || w < y && z < y) << endl;   
+    cout << "E: " << (x < z / w || w < z && z < y || w < x) << endl;
+
+    cout << "F: " << (x + y + z / w == 9) << endl;
 
     cout << y / x << " OR " << y / static_cast<double>(x) << endl;
 
